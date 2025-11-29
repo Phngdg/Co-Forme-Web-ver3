@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tin Tức & Sự Kiện - GYM CO FORME</title>
+
+    <link rel="stylesheet" href="/ver3/assets/css/pricing.css">
+    <link rel="stylesheet" href="/ver3/assets/css/news.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo_header">
+            <a href="/ver3/index.html">
+                GYM<span>COFORME</span>
+            </a>
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="navbar_header">
+            <ul>
+                <li><a href="/ver3/facilities.html">Cơ sở vật chất</a></li>
+                <li><a href="/ver3/pricing.html">Gói tập</a></li>
+                <li><a href="/ver3/news.html">Tin tức</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="news-banner">
+        <div class="banner-overlay"></div>
+        <div class="container banner-content">
+            <h1 class="fade-in-up">Góc chia sẻ <br><span>Kiến thức & Sự kiện</span></h1>
+            <p class="fade-in-up delay-1">Cập nhật những phương pháp tập luyện khoa học, bí quyết dinh dưỡng và thông
+                báo mới nhất từ Gym Co Forme.</p>
+        </div>
+    </section>
+
+    <main class="container main-content">
+
+        <section class="featured-post scroll-animate">
+            <div class="featured-img">
+                <img src="/ver3/assets/img/news.avif"
+                    alt="Featured News">
+                <div class="badge">Mới nhất</div>
+            </div>
+            <div class="featured-info">
+                <div class="meta">
+                    <span class="category-tag">Sự kiện</span>
+                    <span class="date">20/11/2025</span>
+                </div>
+                <h2><a href="#">Giải chạy bộ GymX Marathon 2025: Bứt phá giới hạn bản thân</a></h2>
+                <p>Cùng tham gia giải chạy bộ thường niên lớn nhất năm dành riêng cho hội viên Gym Co Forme với tổng
+                    giải thưởng lên đến 100 triệu đồng. Đăng ký ngay hôm nay!</p>
+                <a href="#" class="read-more-btn">Xem chi tiết &rarr;</a>
+            </div>
+        </section>
+
+        <div class="filter-bar scroll-animate">
+            <button class="filter-btn active" onclick="filterNews('all')">Tất cả</button>
+            <button class="filter-btn" onclick="filterNews('kienthuc')">Kiến thức tập</button>
+            <button class="filter-btn" onclick="filterNews('dinhduong')">Dinh dưỡng</button>
+            <button class="filter-btn" onclick="filterNews('sukien')">Thông báo & Sự kiện</button>
+        </div>
+
+        <div class="news-grid">
+
+            <article class="news-card scroll-animate" data-category="kienthuc">
+                <div class="card-thumb">
+                    <img src="/ver3/assets/img/news1.avif"
+                        alt="News 1">
+                </div>
+                <div class="card-body">
+                    <div class="meta">
+                        <span class="cat-text">Kiến thức</span>
+                        <span class="date">18/11/2025</span>
+                    </div>
+                    <h3><a href="#">5 Bài tập ngực hiệu quả nhất cho nam giới</a></h3>
+                    <p>Tổng hợp các bài tập tác động toàn diện vào cơ ngực trên, giữa và dưới giúp bạn có bộ ngực vạm
+                        vỡ.</p>
+                    <a href="#" class="card-link">Đọc tiếp</a>
+                </div>
+            </article>
+
+            <article class="news-card scroll-animate" data-category="dinhduong">
+                <div class="card-thumb">
+                    <img src="/ver3/assets/img/news2.avif"
+                        alt="News 2">
+                </div>
+                <div class="card-body">
+                    <div class="meta">
+                        <span class="cat-text">Dinh dưỡng</span>
+                        <span class="date">15/11/2025</span>
+                    </div>
+                    <h3><a href="#">Chế độ Eat Clean: Nên bắt đầu từ đâu?</a></h3>
+                    <p>Hướng dẫn chi tiết thực đơn Eat Clean 7 ngày cho người mới bắt đầu, giúp giảm mỡ tăng cơ tự
+                        nhiên.</p>
+                    <a href="#" class="card-link">Đọc tiếp</a>
+                </div>
+            </article>
+
+            <article class="news-card scroll-animate" data-category="sukien">
+                <div class="card-thumb">
+                    <img src="/ver3/assets/img/news4.avif"
+                        alt="News 3">
+                </div>
+                <div class="card-body">
+                    <div class="meta">
+                        <span class="cat-text">Sự kiện</span>
+                        <span class="date">10/11/2025</span>
+                    </div>
+                    <h3><a href="#">Thông báo bảo trì hệ thống Locker ngày 25/11</a></h3>
+                    <p>Chúng tôi sẽ tiến hành nâng cấp hệ thống khóa từ Smartkey tại khu vực Locker nam. Xin quý khách
+                        lưu ý.</p>
+                    <a href="#" class="card-link">Đọc tiếp</a>
+                </div>
+            </article>
+
+            <article class="news-card scroll-animate" data-category="dinhduong">
+                <div class="card-thumb">
+                    <img src="/ver3/assets/img/news3.avif"
+                        alt="News 4">
+                </div>
+                <div class="card-body">
+                    <div class="meta">
+                        <span class="cat-text">Dinh dưỡng</span>
+                        <span class="date">05/11/2025</span>
+                    </div>
+                    <h3><a href="#">Whey Protein và Mass Gainer: Đừng nhầm lẫn!</a></h3>
+                    <p>Phân biệt công dụng của 2 loại thực phẩm bổ sung phổ biến nhất để chọn đúng loại phù hợp với mục
+                        tiêu.</p>
+                    <a href="#" class="card-link">Đọc tiếp</a>
+                </div>
+            </article>
+
+            <article class="news-card scroll-animate" data-category="kienthuc">
+                <div class="card-thumb">
+                    <img src="/ver3/assets/img/news5.avif"
+                        alt="News 5">
+                </div>
+                <div class="card-body">
+                    <div class="meta">
+                        <span class="cat-text">Kiến thức</span>
+                        <span class="date">01/11/2025</span>
+                    </div>
+                    <h3><a href="#">Cardio trước hay sau khi tập tạ?</a></h3>
+                    <p>Câu hỏi muôn thuở của Gymer. Câu trả lời phụ thuộc hoàn toàn vào mục tiêu: Tăng sức bền hay Tăng
+                        cơ.</p>
+                    <a href="#" class="card-link">Đọc tiếp</a>
+                </div>
+            </article>
+
+        </div>
+
+        <div class="pagination">
+            <a href="#" class="page-btn active">1</a>
+            <a href="#" class="page-btn">2</a>
+            <a href="#" class="page-btn">3</a>
+            <a href="#" class="page-btn">&rarr;</a>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__left">
+                <div class="logo_header">GYM<span>COFORME</span></div>
+                <p class="footer__desc">
+                    GymX – Nơi khởi đầu hành trình chinh phục sức mạnh và sức khỏe bền vững.
+                </p>
+                <br>
+            </div>
+
+            <div class="footer__center">
+                <h3 class="footer__title">Thông tin</h3>
+                <ul class="footer__menu">
+                    <li><a href="DichVu.html">Dịch vụ</a></li>
+                    <li><a href="CoSoVatChat.html">Cơ sở vật chất</a></li>
+                    <li><a href="GoiTap.html">Gói tập</a></li>
+                    <li><a href="TinTuc.html">Tin tức</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__right">
+                <h3 class="footer__title">Liên hệ</h3>
+                <ul class="footer__contact">
+                    <li><strong>Địa chỉ:</strong> 123 Đường Fitness, Q.1, TP.HCM</li>
+                    <li><strong>Hotline:</strong> 0909 999 999</li>
+                    <li><strong>Email:</strong> support@gymx.vn</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>© 2025 GymX. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/ver3/assets/js/news.js"></script>
+</body>
+
+</html>

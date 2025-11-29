@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký & Bảng giá - GYM CO FORME</title>
+
+    <link rel="stylesheet" href="/ver3/assets/css/pricing.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo_header">
+            <a href="/ver3/index.html">
+                GYM<span>COFORME</span>
+            </a>
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="navbar_header">
+            <ul>
+                <li><a href="/ver3/facilities.html">Cơ sở vật chất</a></li>
+                <li><a href="/ver3/pricing.html">Gói tập</a></li>
+                <li><a href="/ver3/news.html">Tin tức</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main class="container">
+
+        <div class="section-heading">
+            <h2>Ưu đãi hot</h2>
+            <p>Chọn ngay gói tập để bắt đầu đăng ký</p>
+        </div>
+
+        <div class="grid-3">
+            <div class="grid-item">
+                <div class="promo-tag">Tiết kiệm</div>
+                <h3>Gói Cơ Bản (1 Tháng)</h3>
+                <div class="price-display">299.000₫</div>
+                <button class="btn-register" onclick="selectPlan('goi-1-thang')">Đăng ký gói</button>
+            </div>
+
+            <div class="grid-item popular">
+                <div class="promo-tag">Phổ biến nhất</div>
+                <h3>Gói Tiêu Chuẩn (3 Tháng)</h3>
+                <div class="price-display">799.000₫</div>
+                <button class="btn-register" onclick="selectPlan('goi-3-thang')">Đăng ký gói</button>
+            </div>
+
+            <div class="grid-item">
+                <div class="promo-tag">VIP</div>
+                <h3>Gói HLV (1 Tháng)</h3>
+                <div class="price-display">5.000.000₫</div>
+                <button class="btn-register" onclick="selectPlan('pt-1-thang')">Đăng ký gói</button>
+            </div>
+        </div>
+
+        <div class="section-heading">
+            <h2>So sánh chi tiết</h2>
+        </div>
+
+        <div class="category-tabs">
+            <button class="cat-btn active" onclick="switchTable('personal')">Cá nhân</button>
+            <button class="cat-btn" onclick="switchTable('trainer')">Thuê HLV</button>
+        </div>
+
+        <div class="duration-switch">
+            <button id="dur-1" class="dur-btn active" onclick="toggleCompare(false)">Chỉ xem 1 Tháng</button>
+            <button id="dur-3" class="dur-btn" onclick="toggleCompare(true)">So sánh 3 Tháng</button>
+        </div>
+
+        <div class="pricing-table-container">
+            <div id="block-personal" class="pricing-block active-table">
+                <div class="table-wrapper-mobile">
+                    <table class="pricing-table">
+                        <thead>
+                            <tr>
+                                <th>Hạng mục</th>
+                                <th>1 Tháng</th>
+                                <th class="col-compare">3 Tháng</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Giá</td>
+                                <td>
+                                    <span class="price-text">299.000 VND</span>
+                                    <button class="btn-table-pill" onclick="selectPlan('goi-1-thang')">Đăng ký</button>
+                                </td>
+                                <td class="col-compare">
+                                    <span class="price-text">799.000 VND</span>
+                                    <button class="btn-table-pill" onclick="selectPlan('goi-3-thang')">Đăng ký</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Thời hạn sử dụng</td>
+                                <td>30 ngày</td>
+                                <td class="col-compare">90 ngày</td>
+                            </tr>
+                            <tr>
+                                <td>Thời lượng</td>
+                                <td>24/7 (Không giới hạn)</td>
+                                <td class="col-compare">24/7 (Không giới hạn)</td>
+                            </tr>
+                            <tr>
+                                <td>Hình thức tập</td>
+                                <td>Tự tập</td>
+                                <td class="col-compare">Tự tập</td>
+                            </tr>
+                            <tr>
+                                <td>Tiện ích đi kèm</td>
+                                <td class="table-desc">Locker, Tắm nóng lạnh, Nước uống</td>
+                                <td class="col-compare table-desc">Full tiện ích + <strong class="text-primary">Đo
+                                        Inbody</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Ưu điểm</td>
+                                <td class="table-desc">Linh hoạt, chi phí thấp</td>
+                                <td class="col-compare table-desc">Tiết kiệm hơn, cam kết hơn</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="block-trainer" class="pricing-block">
+                <div class="table-wrapper-mobile">
+                    <table class="pricing-table">
+                        <thead>
+                            <tr>
+                                <th>Hạng mục</th>
+                                <th>1 Tháng (12 Buổi)</th>
+                                <th class="col-compare">3 Tháng (36 Buổi)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Giá</td>
+                                <td>
+                                    <span class="price-text">5.000.000 VND</span>
+                                    <button class="btn-table-pill" onclick="selectPlan('pt-1-thang')">Đăng ký</button>
+                                </td>
+                                <td class="col-compare">
+                                    <span class="price-text">12.000.000 VND</span>
+                                    <button class="btn-table-pill" onclick="selectPlan('pt-3-thang')">Đăng ký</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Thời hạn sử dụng</td>
+                                <td>30 ngày</td>
+                                <td class="col-compare">90 ngày</td>
+                            </tr>
+                            <tr>
+                                <td>Thời lượng</td>
+                                <td>60 phút / buổi</td>
+                                <td class="col-compare">60 phút / buổi</td>
+                            </tr>
+                            <tr>
+                                <td>Hình thức tập</td>
+                                <td>1 kèm 1 với HLV</td>
+                                <td class="col-compare">1 kèm 1 với HLV</td>
+                            </tr>
+                            <tr>
+                                <td>Tiện ích đi kèm</td>
+                                <td class="table-desc">Khăn tập, Nước, Locker VIP</td>
+                                <td class="col-compare table-desc">Full tiện ích + <strong class="text-primary">Thực đơn
+                                        riêng</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Ưu điểm</td>
+                                <td class="table-desc">Chỉnh kỹ thuật chuẩn</td>
+                                <td class="col-compare table-desc">Cam kết thay đổi hình thể</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div id="registration-section" class="section-heading">
+            <h2>Thông tin đăng ký & Thanh toán</h2>
+        </div>
+
+        <div class="form-wrapper">
+            <div id="success-message" class="hidden">
+                <div class="success-icon">&#10004;</div>
+                <h3>Đăng ký thành công!</h3>
+                <p>Chúng tôi đã nhận được hóa đơn thanh toán của bạn.</p>
+                <button class="btn-ghost" style="margin-top: 20px;" onclick="location.reload()">Về trang chủ</button>
+            </div>
+
+            <form id="joinForm" novalidate>
+                <div class="steps">
+                    <div class="step active" id="progress-1">1. Thông tin</div>
+                    <div class="step" id="progress-2">2. Gói tập</div>
+                    <div class="step" id="progress-3">3. Thanh toán</div>
+                </div>
+
+                <div id="step-1">
+                    <div class="row">
+                        <div class="input-group">
+                            <label>Họ và tên</label>
+                            <input name="fullname" id="fullname" type="text" required>
+                            <div class="error-text" id="err-fullname">Vui lòng nhập họ tên</div>
+                        </div>
+                        <div class="input-group">
+                            <label>Số điện thoại</label>
+                            <input name="phone" id="phone" type="tel" required>
+                            <div class="error-text" id="err-phone">Vui lòng nhập số điện thoại</div>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label>Email</label>
+                        <input name="email" id="email" type="email" required>
+                        <div class="error-text" id="err-email">Vui lòng nhập email đúng định dạng</div>
+                    </div>
+                    <div class="btn-group" style="justify-content: flex-end;">
+                        <button type="button" class="btn-primary" onclick="goToStep(2)">Tiếp theo &rarr;</button>
+                    </div>
+                </div>
+
+                <div id="step-2" class="hidden">
+                    <div class="input-group">
+                        <label>Gói tập bạn chọn</label>
+                        <select id="plan" name="plan" onchange="updateSummary()">
+                            <option value="" disabled selected>-- Vui lòng chọn gói --</option>
+                            <option value="goi-1-thang" data-price="299,000₫" data-name="Tự tập - 1 Tháng">Tự tập (1
+                                Tháng) - 299,000₫</option>
+                            <option value="goi-3-thang" data-price="799,000₫" data-name="Tự tập - 3 Tháng">Tự tập (3
+                                Tháng) - 799,000₫</option>
+                            <option value="pt-1-thang" data-price="5,000,000₫" data-name="Huấn Luyện Viên - 1 Tháng">
+                                Thuê HLV (1 Tháng) - 5,000,000₫</option>
+                            <option value="pt-3-thang" data-price="12,000,000₫" data-name="Huấn Luyện Viên - 3 Tháng">
+                                Thuê HLV (3 Tháng) - 12,000,000₫</option>
+                        </select>
+                        <div class="error-text" id="err-plan">Vui lòng chọn gói tập</div>
+                    </div>
+                    <div class="input-group">
+                        <label>Mã khuyến mãi (nếu có) </label>
+                        <input id="promo" type="text">
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn-ghost" onclick="goToStep(1)">Quay lại</button>
+                        <button type="button" class="btn-primary" onclick="goToStep(3)">Tiếp theo &rarr;</button>
+                    </div>
+                </div>
+
+                <div id="step-3" class="hidden">
+                    <div class="summary-box">
+                        <div class="summary-row"><span>Gói đăng ký:</span><span id="sum-name"
+                                style="color: #fff;">...</span></div>
+                        <div class="summary-row" style="border:none; margin-bottom:0"><span>Thành tiền:</span><span
+                                id="sum-price" class="summary-total">0₫</span></div>
+                    </div>
+                    <div class="qr-section">
+                        <p style="font-weight:bold">Quét mã để thanh toán</p>
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=00020101021138570010A000000727012700069704220113PAYMENTQRPAY0208QRIBFTTA53037045802VN63041452"
+                            alt="QR Code" style="max-width:150px">
+                        <p style="margin-top:5px; color:red; font-size: 0.85rem;">Nội dung CK: <span
+                                id="ck-content">...</span></p>
+                    </div>
+                    <div class="upload-box" onclick="document.getElementById('bill-upload').click()">
+                        <div style="font-size: 3rem; margin-bottom: 10px; color: #fff;">&#8682;</div>
+                        <p>Nhấn vào đây để tải ảnh hóa đơn</p>
+                        <input type="file" id="bill-upload" accept="image/*" onchange="handleFileSelect(this)"
+                            style="display:none">
+                        <div id="file-name-display" class="file-name"></div>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn-ghost" onclick="goToStep(2)">Quay lại</button>
+                        <button type="button" class="btn-primary" onclick="submitForm()">Hoàn tất đăng ký</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__left">
+                <div class="logo_header">GYM<span>COFORME</span></div>
+                <p class="footer__desc">
+                    GymX – Nơi khởi đầu hành trình chinh phục sức mạnh và sức khỏe bền vững.
+                </p>
+                <br>
+            </div>
+
+            <div class="footer__center">
+                <h3 class="footer__title">Thông tin</h3>
+                <ul class="footer__menu">
+                    <li><a href="DichVu.html">Dịch vụ</a></li>
+                    <li><a href="CoSoVatChat.html">Cơ sở vật chất</a></li>
+                    <li><a href="GoiTap.html">Gói tập</a></li>
+                    <li><a href="TinTuc.html">Tin tức</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__right">
+                <h3 class="footer__title">Liên hệ</h3>
+                <ul class="footer__contact">
+                    <li><strong>Địa chỉ:</strong> 123 Đường Fitness, Q.1, TP.HCM</li>
+                    <li><strong>Hotline:</strong> 0909 999 999</li>
+                    <li><strong>Email:</strong> support@gymx.vn</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>© 2025 GymX. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/ver3/assets/js/pricing.js"></script>
+
+</body>
+
+</html>
